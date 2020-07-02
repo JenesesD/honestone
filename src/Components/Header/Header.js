@@ -119,7 +119,7 @@ export default function SearchAppBar() {
                   Collection
                 </Link>
               </Typography>
-              <Typography
+              {/* <Typography
                 className={classes.menuButton}
                 variant="button"
                 noWrap
@@ -128,10 +128,11 @@ export default function SearchAppBar() {
                   style={{ color: "#fff", textDecoration: "none" }}
                   to="/profile"
                   underline="none"
+                
                 >
                   Profile
                 </Link>
-              </Typography>
+              </Typography> */}
               <Typography
                 className={classes.menuButton}
                 variant="button"
