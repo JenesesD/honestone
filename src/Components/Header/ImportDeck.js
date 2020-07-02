@@ -30,6 +30,11 @@ function uniq(a, param) {
   });
 }
 
+function filterDeckString(deckString) {
+  console.log(deckString.split("#"));
+  return deckString;
+}
+
 export function ImportDeck() {
   const classes = useStyles();
   const { cardsInDeck, setCardsInDeck, setHero } = useContext(DeckContext);
@@ -55,7 +60,9 @@ export function ImportDeck() {
             getAccessToken().then((token) => {
               blizzardAPI
                 .get(
-                  `https://us.api.blizzard.com/hearthstone/deck/${deckString}?locale=en_US&access_token=${token}`
+                  `https://us.api.blizzard.com/hearthstone/deck/${filterDeckString(
+                    deckString
+                  )}?locale=en_US&access_token=${token}`
                 )
                 .then((json) => {
                   setHero({
