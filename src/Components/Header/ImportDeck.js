@@ -32,7 +32,8 @@ function uniq(a, param) {
 
 function filterDeckString(deckString) {
   let split = deckString.split("#");
-  return split[split.length - 3].trim();
+
+  return split.length > 1 ? [split.length - 3].trim() : deckString;
 }
 
 export function ImportDeck() {
